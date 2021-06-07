@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<meta name = "linguagem" content="pt-BR">
+<meta name="viewport" content="with=device-width,initial-scale=1.0">
+<title>GALLERY </title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    input{
+    display: none;
+}
+.container{
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-weight: normal ;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+    color: #300559;
+}
+h1::before{
+    content: ;
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #ffc0cb;;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{ width: 100px;}
+    50%{ width: 200px;}
+    100%{ width: 200px;}
+}
+.top-content{
+    background-color:  #f8f542;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgrey;
+}
+h3{
+    height: 100%;
+    background-color: #c7cbe2;
+    line-height: 60px;
+    padding: 0 50px;
+    color: #300559;
+}
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: grey;
+    cursor: pointer;
+    transition: color.5s;
+}
+label:hover{
+    color: black;
+}
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgrey;
+    cursor: pointer;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    transition: .5s;
+}
+.pic ::before{
+    content: "PHOTO GALLERY";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+.pic::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: rgba(0,0,0,.4);
+    transition: .3s;
+}
+    /*---------------------------------------------------*/
+    ul{
+        width: 800px;
+        list-style: none;
+        display: flex;
+        margin: 100px;
+    }
+    .lbox{
+        visibility: hidden;
+        opacity: 0;
+    }
+    .lbox:target{
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(10,10,10,.7);
+        position: fixed;
+    }
+    .box_img{
+        width: 1000px;
+        margin: 150px;
+    }
+    .btn{
+        color: #fff;
+        font-family: Arial;
+        text-decoration: none;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+        text-align: center;
+    }
+    #prev{
+        left: 5%;
+        top: 45%;
+    }
+    #next{
+        right: 5%;
+        top: 45%;
+    }
+    #close{
+        right:2% ;
+        top: 0;
+    }
+
+
+</style>
+</head>
+<body>
+    <input type="radio"  id="check1" checked >
+	<input type="radio"  id="check2">
+	<input type="radio" id="check3">
+	<input type="radio"  id="check4">
+
+	<div class="container">
+		<h1> PHOTO GALLERY</h1>
+		
+		<div class="top-content">
+			<h3>&#171;PHOTO GALLERY&#187</h3>
+			<label for="check1"><a href="file:///C:/Users/Geovanna%20Lim/Downloads/Imagens/foods.html">FOODS</a></label>
+			<label for="check2"><a href="file:///C:/Users/Geovanna%20Lim/Downloads/Imagens/about.me.html">ABOUT ME </a></label>
+			<label for="check3"><a href="file:///C:/Users/Geovanna%20Lim/Downloads/Imagens/future.html">FUTURE PROFESSIONAL</a> </label>
+			<label for="check4"><a href="file:///C:/Users/Geovanna%20Lim/Downloads/Imagens/places.html">PLACES</a></label>
+			
+		</div>
+		<!---------------------------------------------------->
+    <ul>
+        <li><a href="#img1"><img src="batata.food.jpg"width= "360px";
+            height= "260px" class="min"></a></li>
+            <li><a href="#img2"><img src="hamburguer.food.jpg"width= "360px";
+                height= "260px" class="min"></a></li>
+                <li><a href="#img3"><img src="churrasco.food.jpg"width= "360px";
+                    height= "260px" class="min"></a></li>
+                    <li><a href="#img4"><img src="feijoada.food.jpg"width= "360px";
+                        height= "260px" class="min"></a></li>
+                        <li><a href="#img5"><img src="lasanha.food.jpg"width= "360px";
+                            height= "260px" class="min"></a></li>
+                            <li><a href="#img6"><img src="tacos.food.jpg"width= "360px";
+                                height= "260px" class="min"></a></li>
+                                <li><a href="#img7"><img src="pizza.food.jpg"width= "360px";
+                                    height= "260px" class="min"></a></li>
+
+    </ul>
+    <div class="lbox" id="img1">
+        <div class="box_img">
+            <a href="#img7" class="btn" id="prev">&#171;</a>
+            <a href="" class="btn" id="close">x</a>
+            <img src="batata.food.jpg"width= "360px";
+            height= "260px" >
+        <a href="#img2" class="btn" id="next">&#187</a>
+        </div>
+    </div>
+        <!-------------------------------------->
+        <div class="lbox" id="img2">
+            <div class="box_img">
+                <a href="#img1" class="btn" id="prev">&#171;</a>
+                <a href="" class="btn" id="close">x</a>
+                <img src="hamburguer.food.jpg"width= "360px";
+                height= "260px" >
+            <a href="#img3" class="btn" id="next">&#187</a>
+           </div>
+            </div>
+            <div class="lbox" id="img3">
+                <div class="box_img">
+                    <a href="#img2" class="btn" id="prev">&#171;</a>
+                    <a href="" class="btn" id="close">x</a>
+                    <img src="churrasco.food.jpg"width= "360px";
+                    height= "260px" >
+                <a href="#img4" class="btn" id="next">&#187</a>
+                </div>
+                </div>
+                <div class="lbox" id="img4">
+                    <div class="box_img">
+                        <a href="#img3" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">x</a>
+                        <img src="feijoada.food.jpg"width= "360px";
+                        height= "260px" >
+                    <a href="#img5" class="btn" id="next">&#187</a>
+                    </div>
+                </div>
+                <div class="lbox" id="img5">
+                    <div class="box_img">
+                        <a href="#img4" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">x</a>
+                        <img src="lasanha.food.jpg"width= "360px";
+                        height= "260px" >
+                    <a href="#img6" class="btn" id="next">&#187</a>
+                    </div>
+                </div>
+                <div class="lbox" id="img6">
+                    <div class="box_img">
+                        <a href="#img5" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">x</a>
+                        <img src="tacos.food.jpg"width= "360px";
+                        height= "260px" >
+                    <a href="#img7" class="btn" id="next">&#187</a>
+                    </div>
+                </div>
+                <div class="lbox" id="img7">
+                    <div class="box_img">
+                        <a href="#img6" class="btn" id="prev">&#171;</a>
+                        <a href="" class="btn" id="close">x</a>
+                        <img src="pizza.food.jpg"width= "360px";
+                        height= "260px" >
+                    <a href="#img1" class="btn" id="next">&#187</a>
+                    </div>
+                </div>
+
+</body>
+</html>
